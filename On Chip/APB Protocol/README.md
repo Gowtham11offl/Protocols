@@ -39,20 +39,20 @@
   ──────
   ## 3. Essential APB Signals
 
-   Signal                 │ Direction (Bridge → Slave) │ Description                                                             │ Introduced In
-  ────────────────────────┼────────────────────────────┼─────────────────────────────────────────────────────────────────────────┼────────────────────────
-   PCLK                   │ Bridge → Slave             │ Clock signal. All signals sampled on rising edge.                       │ APB2
-   PRESETn                │ Bridge → Slave             │ Active-LOW asynchronous reset.                                          │ APB2
-   PADDR                  │ Bridge → Slave             │ Address bus (typically up to 32 bits).                                  │ APB2
-   PSELx                  │ Bridge → Slave             │ Peripheral select line. Each slave has its own dedicated PSEL line.     │ APB2
-   PENABLE                │ Bridge → Slave             │ Strobe signal indicating the ACCESS phase (2nd cycle onwards).          │ APB2
-   PWRITE                 │ Bridge → Slave             │ Transfer direction: 1 = Write, 0 = Read.                                │ APB2
-   PWDATA                 │ Bridge → Slave             │ Write data bus (typically 8, 16, or 32 bits).                           │ APB2
-   PRDATA                 │ Slave → Bridge             │ Read data bus. Driven by slave during read transfers.                   │ APB2
-   PREADY                 │ Slave → Bridge             │ Handshake signal. Slave pulls LOW to insert wait states (stall).        │ APB3
-   PSLVERR                │ Slave → Bridge             │ Transfer error indicator (e.g., invalid address or permission failure). │ APB3
-   PSTRB                  │ Bridge → Slave             │ Byte strobes indicating valid byte lanes in write data (sparse writes). │ APB4
-   PPROT                  │ Bridge → Slave             │ Protection attributes (Privileged, Secure, Data/Instruction).           │ APB4
+| Signal | Direction | Description | Introduced In |
+|:---    |:---       |:---         |:---:          |
+| `PCLK` | Bridge → Slave | Clock signal. All signals are sampled on the rising edge. | APB2 |
+| `PRESETn` | Bridge → Slave | Active-LOW asynchronous reset. | APB2 |
+| `PADDR` | Bridge → Slave | Address bus (typically up to 32 bits). | APB2 |
+| `PSELx` | Bridge → Slave | Peripheral select line. Each slave has its own dedicated PSEL line. | APB2 |
+| `PENABLE` | Bridge → Slave | Strobe signal indicating the ACCESS phase (2nd cycle onwards). | APB2 |
+| `PWRITE` | Bridge → Slave | Transfer direction: 1 = Write, 0 = Read. | APB2 |
+| `PWDATA` | Bridge → Slave | Write data bus (typically 8, 16, or 32 bits). | APB2 |
+| `PRDATA` | Slave → Bridge | Read data bus. Driven by slave during read transfers. | APB2 |
+| `PREADY` | Slave → Bridge | Handshake signal. Slave pulls LOW to insert wait states (stall). | APB3 |
+| `PSLVERR` | Slave → Bridge | Transfer error indicator (e.g., invalid address or permission failure). | APB3 |
+| `PSTRB` | Bridge → Slave | Byte strobes indicating valid byte lanes in write data (sparse writes). | APB4 |
+| `PPROT` | Bridge → Slave | Protection attributes (Privileged, Secure, Data/Instruction). | APB4 |
   ──────
   ## 4. The APB Finite State Machine (FSM)
 
