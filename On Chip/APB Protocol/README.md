@@ -1,4 +1,4 @@
-  #Advanced Peripheral Bus (APB) Protocol Explained
+  ## Advanced Peripheral Bus (APB) Protocol Explained
 
   The APB (Advanced Peripheral Bus) protocol is part of the ARM AMBA (Advanced Microcontroller Bus Architecture) family. It is specifically designed for
   connecting to low-bandwidth, low-power, and low-complexity peripherals (such as I2C, UART, SPI, GPIOs, and Timers) where high throughput and pipelined
