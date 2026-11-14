@@ -1,0 +1,63 @@
+===============================================================
+          SELF-CHECKING APB VERIFICATION SUITE
+===============================================================
+
+[TEST 1] Verifying Reset State...
+  [PASS] Reset correctly initialized bus to IDLE (PSEL=0, PENABLE=0)
+
+[TEST 2] Full Register Sweep: Writing all 32 registers...
+  Done writing 32 registers. Now reading back and verifying...
+  [PASS] Addr: 0x00000000 | Actual: 0xa0000000 == Expected: 0xa0000000
+  [PASS] Addr: 0x00000001 | Actual: 0xa0010001 == Expected: 0xa0010001
+  [PASS] Addr: 0x00000002 | Actual: 0xa0020002 == Expected: 0xa0020002
+  [PASS] Addr: 0x00000003 | Actual: 0xa0030003 == Expected: 0xa0030003
+  [PASS] Addr: 0x00000004 | Actual: 0xa0040004 == Expected: 0xa0040004
+  [PASS] Addr: 0x00000005 | Actual: 0xa0050005 == Expected: 0xa0050005
+  [PASS] Addr: 0x00000006 | Actual: 0xa0060006 == Expected: 0xa0060006
+  [PASS] Addr: 0x00000007 | Actual: 0xa0070007 == Expected: 0xa0070007
+  [PASS] Addr: 0x00000008 | Actual: 0xa0080008 == Expected: 0xa0080008
+  [PASS] Addr: 0x00000009 | Actual: 0xa0090009 == Expected: 0xa0090009
+  [PASS] Addr: 0x0000000a | Actual: 0xa00a000a == Expected: 0xa00a000a
+  [PASS] Addr: 0x0000000b | Actual: 0xa00b000b == Expected: 0xa00b000b
+  [PASS] Addr: 0x0000000c | Actual: 0xa00c000c == Expected: 0xa00c000c
+  [PASS] Addr: 0x0000000d | Actual: 0xa00d000d == Expected: 0xa00d000d
+  [PASS] Addr: 0x0000000e | Actual: 0xa00e000e == Expected: 0xa00e000e
+  [PASS] Addr: 0x0000000f | Actual: 0xa00f000f == Expected: 0xa00f000f
+  [PASS] Addr: 0x00000010 | Actual: 0xa0100010 == Expected: 0xa0100010
+  [PASS] Addr: 0x00000011 | Actual: 0xa0110011 == Expected: 0xa0110011
+  [PASS] Addr: 0x00000012 | Actual: 0xa0120012 == Expected: 0xa0120012
+  [PASS] Addr: 0x00000013 | Actual: 0xa0130013 == Expected: 0xa0130013
+  [PASS] Addr: 0x00000014 | Actual: 0xa0140014 == Expected: 0xa0140014
+  [PASS] Addr: 0x00000015 | Actual: 0xa0150015 == Expected: 0xa0150015
+  [PASS] Addr: 0x00000016 | Actual: 0xa0160016 == Expected: 0xa0160016
+  [PASS] Addr: 0x00000017 | Actual: 0xa0170017 == Expected: 0xa0170017
+  [PASS] Addr: 0x00000018 | Actual: 0xa0180018 == Expected: 0xa0180018
+  [PASS] Addr: 0x00000019 | Actual: 0xa0190019 == Expected: 0xa0190019
+  [PASS] Addr: 0x0000001a | Actual: 0xa01a001a == Expected: 0xa01a001a
+  [PASS] Addr: 0x0000001b | Actual: 0xa01b001b == Expected: 0xa01b001b
+  [PASS] Addr: 0x0000001c | Actual: 0xa01c001c == Expected: 0xa01c001c
+  [PASS] Addr: 0x0000001d | Actual: 0xa01d001d == Expected: 0xa01d001d
+  [PASS] Addr: 0x0000001e | Actual: 0xa01e001e == Expected: 0xa01e001e
+  [PASS] Addr: 0x0000001f | Actual: 0xa01f001f == Expected: 0xa01f001f
+
+[TEST 3] Bit Pattern Test (Walking 1s)...
+  [PASS] Addr: 0x00000004 | Actual: 0x00000001 == Expected: 0x00000001
+  [PASS] Addr: 0x00000008 | Actual: 0x00000002 == Expected: 0x00000002
+  [PASS] Addr: 0x0000000c | Actual: 0x80000000 == Expected: 0x80000000
+  [PASS] Addr: 0x00000010 | Actual: 0xffffffff == Expected: 0xffffffff
+
+[TEST 4] Back-to-Back Consecutive Pipeline Transfers...
+  [PASS] Addr: 0x00000014 | Actual: 0x11223344 == Expected: 0x11223344
+
+===============================================================
+                   FINAL SCOREBOARD REPORT
+===============================================================
+  TOTAL TESTS RUN   : 38
+  PASSED TESTS      : 38
+  FAILED TESTS      : 0
+  PROTOCOL ERRORS   : 0
+===============================================================
+  >>> STATUS: ALL VERIFICATION CHECKS PASSED SUCCESSFULLY! <<<
+===============================================================
+
+apb_tb.v:298: $finish called at 3046000 (1ps)
